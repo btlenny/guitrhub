@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel='stylesheet' href='/stylesheets/style.css' />
-  <title><%= title %></title>
+ 
 </head>
 <body>
   <nav>
-    <a href="/guitars" <%- title === 'New Guitars' ? 'class="active"' : '' %> >NEW GUITARS</a>
+    <a href="/guitars/new">NEW GUITARS</a>
     <% if (user) { %>
       <a href="/logout">LOG OUT</a>
     <% } else { %>

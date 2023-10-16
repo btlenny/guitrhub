@@ -1,11 +1,94 @@
 <%- include('../partials/header') %>
 
-<h2>Enter a New Review</h2>
+<h2>Enter a New Guitar</h2>
 <form action="/guitars" method="POST">
   <label>Brand:
     <input type="text" name="brand">
   </label>
-  <button type="submit">Add Movie</button>
+  <label>Model:
+    <input type="text" name="model">
+  </label>
+  <label>Strings:
+    <select name="strings">
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+    </select>
+  </label>
+  <label>Body Wood:
+    <input type="text" name="bodywood">
+  </label>
+  <label>Neck Wood:
+    <input type="text" name="neckwood">
+  </label>
+  <label>Fingerboard Wood:
+    <input type="text" name="fingerboardwood">
+  </label>
+  <label> Fretboard Radius:
+    <select name="fretboardradius">
+      <option value="7.25">7.25"</option>
+      <option value="9">9"</option>
+      <option value="9.5">9.5"</option>
+      <option value="10">10"</option>
+      <option value="10.5">10.5"</option>
+      <option value="11">11"</option>
+      <option value="11.5">11.5"</option>
+      <option value="12">12"</option>
+      <option value="12.5">12.5"</option>
+      <option value="13">13.5"</option>
+      <option value="14">14"</option>
+      <option value="14.5">14.5"</option>
+      <option value="15">15.5"</option>
+      <option value="16">16"</option>
+      <option value="20">20"</option>
+      <option value="1016">10"-16" Compound</option>
+      <option value="9514">9.5"-14" Compound</option>
+      <option value="1216">12"-16" Compound"</option>
+    </select>
+  </label>
+  <label>Number of Frets:
+    <select name="frets">
+    <option value="21">21</option>
+    <option value="22">22</option>
+    <option value="23">23</option>
+    <option value="24">24</option>
+    <option value="26">26</option>
+    <option value="27">28</option>
+    <option value="28">28</option>
+  </select>
+  </label>
+  <label>Scale Length:
+    <select name="scalelength">
+      <option value="24">24"</option>
+      <option value="245">24.5"</option>
+      <option value="2475">24.75"</option>
+      <option value="25">25"</option>
+      <option value="25.5">25"</option>
+      <option value="26.5">26.5"</option>
+      <option value="27">27"</option>
+      <option value="27.5">27.5"</option>
+      <option value="28">28"</option>
+      <option value="29.4">29.4"</option>
+    </select>
+  </label>
+  <label> Neck Pickup:
+    <input type="text" name="neckpickup">
+  </label>
+  <label>Middle Pickup:
+    <input type="text" name="middlepickup">
+  </label>
+  <label>Bridge Pickup:
+    <input type="text" name="bridgepickup">
+  </label>
+ 
+  <label>Tuners:
+    <input type="text" name="tuners">
+  </label>
+  <label>Bridge:
+    <input type="text" name="tuners">
+  </label>
+ 
+  <button type="submit">Add Guitar</button>
 </form>
 <p><%= errorMsg %></p>
 

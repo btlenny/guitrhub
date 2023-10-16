@@ -3,16 +3,24 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const guitarSchema = new Schema({
-    brand: String,
-    model: String,
+    brand: {
+      type: String,
+      required: true
+    },
+    model: {
+      type: String,
+      required: true
+    },
     strings: Number,
-    body: String,
-    neck: String,
-    fingerboard: String,
-    radius: Number,
-    frets: Number,
-    scale: Number,
-    pickups: String,
+    bodywood: String,
+    neckwood: String,
+    fingerboardwood: String,
+    fretboardradius: Number,
+    fret: Number,
+    scalelength: Number,
+    neckpickup: String,
+    middlepickup: String,
+    bridepickup: String,
     tuners: String,
     bridge: String,
   });

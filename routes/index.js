@@ -8,6 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('index', { title: 'GuitrHub' });
 });
 
+
+
 // Google OAuth login route
 router.get('/auth/google', passport.authenticate(
   // Which passport strategy is being used?
