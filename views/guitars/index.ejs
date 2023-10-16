@@ -1,0 +1,52 @@
+<%- include('../partials/header') %>
+
+<h2>Guitar List</h2>
+<table>
+  <thead>
+    <tr>
+      <th>Year</th>
+      <th>Brand</th>
+      <th>Model</th>
+      <th>Number of Strings</th>
+      <th>Body Wood</th>
+      <th>Neck Wood</th>
+      <th>Fingerboard Wood</th>
+      <th>Fretboard Radius</th>
+      <th>Number of Frets</th>
+      <th>Scale Length</th>
+      <th>Neck Pickup</th>
+      <th>Middle Pickup</th>
+      <th>Bridge Pickup</th>
+      <th>Tuners</th>
+      <th>Bridge</th>
+      <th>Left Handed</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    <% guitars.forEach(function(g) { %>
+      <tr>
+        <td><%= g.year %></td>
+        <td><%= g.brand %></td>
+        <td><%= g.model %></td>
+        <td><%= g.strings%></td>
+        <td><%= g.bodywood %></td>
+        <td><%= g.neckwood %></td>
+        <td><%= g.fingerboardwood %></td>
+        <td><%= g.fretboardradius %></td>
+        <td><%= g.frets %></td>
+        <td><%= g.scalelength %></td>
+        <td><%= g.neckpickup %></td>
+        <td><%= g.middlepickup %></td>
+        <td><%= g.bridgepickup %></td>
+        <td><%= g.tuners %></td>
+        <td><%= g.bridge %></td>
+        <td><%= g.lefthanded ? 'Yes' : 'No'%></td>
+        <td><a href="/guitars/<%= g._id %>">REVIEWS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>
+

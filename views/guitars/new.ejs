@@ -2,6 +2,9 @@
 
 <h2>Enter a New Guitar</h2>
 <form action="/guitars" method="POST">
+  <label>Year:
+    <input type="text" name="year">
+  </label>
   <label>Brand:
     <input type="text" name="brand">
   </label>
@@ -80,15 +83,16 @@
   <label>Bridge Pickup:
     <input type="text" name="bridgepickup">
   </label>
- 
   <label>Tuners:
     <input type="text" name="tuners">
   </label>
   <label>Bridge:
-    <input type="text" name="tuners">
+    <input type="text" name="bridge">
   </label>
- 
-  <button type="submit">Add Guitar</button>
+  <label>Left Handed:</label>
+  <input type="checkbox" name="lefthanded">
+  <input type="submit" value="Add Guitar">
+  
 </form>
 <p><%= errorMsg %></p>
 

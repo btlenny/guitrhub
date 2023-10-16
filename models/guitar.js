@@ -3,6 +3,10 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const guitarSchema = new Schema({
+    year: {
+      type: String,
+      required: true
+    },
     brand: {
       type: String,
       required: true
@@ -11,18 +15,58 @@ const guitarSchema = new Schema({
       type: String,
       required: true
     },
-    strings: Number,
-    bodywood: String,
-    neckwood: String,
-    fingerboardwood: String,
-    fretboardradius: Number,
-    fret: Number,
-    scalelength: Number,
-    neckpickup: String,
-    middlepickup: String,
-    bridepickup: String,
-    tuners: String,
-    bridge: String,
+    strings: {
+      type: String,
+      required: true
+    },
+    bodywood: {
+      type: String,
+      required: true
+    },
+    neckwood: {
+      type: String,
+      required: true
+    },
+    fingerboardwood: {
+      type: String,
+      required: true
+    },
+    fretboardradius: {
+      type: String,
+      required: true
+    },
+    frets: {
+      type: String,
+      required: true
+    },
+    scalelength: {
+      type: String,
+      required: true
+    },
+    neckpickup: {
+      type: String,
+      required: true
+    },
+    middlepickup: {
+      type: String,
+      required: true
+    },
+    bridgepickup:{
+      type: String,
+      required: true
+    },
+    tuners: {
+      type: String,
+      required: true
+    },
+    bridge: {
+      type: String,
+      required: true
+    },
+    lefthanded: {
+      type: Boolean, 
+      default: false
+    },
   });
 
   module.exports = mongoose.model('Guitar', guitarSchema);
