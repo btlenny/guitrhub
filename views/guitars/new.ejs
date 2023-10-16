@@ -1,0 +1,12 @@
+<%- include('../partials/header') %>
+
+<h2>Enter a New Review</h2>
+<form action="/guitars" method="POST">
+  <label>Brand:
+    <input type="text" name="brand">
+  </label>
+  <button type="submit">Add Movie</button>
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>

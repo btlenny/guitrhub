@@ -9,6 +9,7 @@
 </head>
 <body>
   <nav>
+    <a href="/guitars" <%- title === 'New Guitars' ? 'class="active"' : '' %> >NEW GUITARS</a>
     <% if (user) { %>
       <a href="/logout">LOG OUT</a>
     <% } else { %>
