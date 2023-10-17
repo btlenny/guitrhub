@@ -1,13 +1,11 @@
 const Guitar = require('../models/guitar');
 
-
 module.exports = {
     new: newGuitar,
     create,
     show,
     index,
   };
-
 
 function newGuitar(req, res) {
     // We'll want to be able to render an

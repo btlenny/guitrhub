@@ -8,13 +8,14 @@
 <% if (guitar.reviews.length) { %>
     <table>
       <thead>
-        <h2>REVIEWS</h2
+        <h2>REVIEWS</h2>
       </thead>
       <tbody>
         <% guitar.reviews.forEach(function(r) { %>
           <tr>
               <div class="review-container">
                 <div class="review-details">
+                  <td class="review-user"><img alt="avatar" src="<%= r.userAvatar %>" referrerpolicy="no-referrer" ><%= r.userName %></td>
                   <p><%= r.content %></p>
                   <p><strong>Rating:</strong> <%= r.rating %></p>
                 </div>
