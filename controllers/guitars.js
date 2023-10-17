@@ -14,18 +14,19 @@ function newGuitar(req, res) {
     res.render('guitars/new', { errorMsg: '' });
   }
 
-async function create(req, res) {
-    console.log(req.body);
-    await Guitar.create(req.body);
-    // Always redirect after CUDing data
-    // We'll refactor to redirect to the movies index after we implement it
-    res.redirect('/guitars');
-  } 
+  async function create(req, res) {
+    req.body.lefthanded = !!req.body.lefthanded;
+    try {
+     await Guitar.create(req.body);
+     res.redirect('/guitars');
+    } catch (err) {
+     res.render('guitars/new', { errorMsg: 'An error occurred.' });
+    }
+ }
 
-
-  async function index(req, res) {
+async function index(req, res) {
     const guitars = await Guitar.find({}).exec();
     res.render('guitars/index', { guitars });
-  }
+}
   
   
