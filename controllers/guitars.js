@@ -4,6 +4,7 @@ const Guitar = require('../models/guitar');
 module.exports = {
     new: newGuitar,
     create,
+    show,
     index,
   };
 
@@ -14,7 +15,12 @@ function newGuitar(req, res) {
     res.render('guitars/new', { errorMsg: '' });
   }
 
-  async function create(req, res) {
+async function show(req, res) {
+    const guitar = await Guitar.findById(req.params.id);
+    res.render('guitars/show', { title: 'Guitar Reviews', guitar });
+  }
+
+async function create(req, res) {
     req.body.lefthanded = !!req.body.lefthanded;
     try {
      await Guitar.create(req.body);

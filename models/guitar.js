@@ -2,6 +2,21 @@ const mongoose = require('mongoose');
 // optional shortcut to the mongoose.Schema class
 const Schema = mongoose.Schema;
 
+const reviewSchema = new Schema({
+  content: {
+    type: String,
+    required: true
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5,
+  }
+  }, {
+    timestamps:true
+})
+
+
 const guitarSchema = new Schema({
     year: {
       type: String,
@@ -65,8 +80,10 @@ const guitarSchema = new Schema({
     },
     lefthanded: {
       type: Boolean, 
-      default: false
-    },
-  });
+      default: false},
+      reviews: [reviewSchema]
+    }, {
+      timestamps: true
+    });
 
-  module.exports = mongoose.model('Guitar', guitarSchema);
+module.exports = mongoose.model('Guitar', guitarSchema);

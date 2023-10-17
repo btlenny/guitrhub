@@ -8,6 +8,8 @@ const guitarsCtrl = require('../controllers/guitars');
 router.get('/', guitarsCtrl.index);
 // GET /gutiars/new
 router.get('/new', guitarsCtrl.new);
+// GET /guitars/:id (show functionality) MUST be below new route
+router.get('/:id', guitarsCtrl.show);
 // POST /guitars
 router.post('/', guitarsCtrl.create);
 
