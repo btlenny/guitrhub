@@ -2,15 +2,35 @@
 
 <h2>Enter a New Guitar</h2>
 <form action="/guitars" method="POST">
-  <!-- <label>Year:
-    <input type="text" name="year">
-  </label> -->
+ 
   <label>Brand:
     <input type="text" name="brand">
   </label>
   <label>Model:
     <input type="text" name="model">
   </label>
+
+  <input type="submit" value="Add Guitar">
+  
+</form>
+<p><%= errorMsg %></p>
+
+<%- include('../partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+
+
+ <!-- <label>Year:
+    <input type="text" name="year">
+  </label> -->
   <!-- <label>Strings:
     <select name="strings">
       <option value="6">6</option>
@@ -91,9 +111,3 @@
   </label>
   <label>Left Handed:</label>
   <input type="checkbox" name="lefthanded"> --> 
-  <input type="submit" value="Add Guitar">
-  
-</form>
-<p><%= errorMsg %></p>
-
-<%- include('../partials/footer') %>
