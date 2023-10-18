@@ -1,3 +1,8 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Palanquin+Dark&display=swap" rel="stylesheet">
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,19 +10,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-  
 </head>
 <body>
   <nav>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary" style="font-family:verdana" >
+    <nav class="navbar navbar-expand-lg bg-dark" style="font-family: 'Palanquin Dark', sans-serif;">
       <div class="container-fluid">
+        <div class="navbar-brand">
+          <a class="navbar-brand" href="/">
+            <img src="images/guitrhub.png" alt="Your Logo" class="img-fluid" style="max-height: 60px; padding-left: 200px;">
+          </a>
+        </div>
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav" style="margin-left: 800px;">
+          <ul class="navbar-nav ml-auto"> 
             <li class="nav-item">
-              <a class="nav-link" href="/guitars/new">NEW GUITARS</a>
+              <a class="nav-link" style="color: white" href="/guitars/new">New Guitars</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/guitars">ALL GUITARS</a>
+              <a class="nav-link" style="color: white" href="/guitars">All Guitars</a>
             </li>
           </ul>
         </div>
@@ -27,12 +36,10 @@
         LOGOUT 
       </a>
       <% } else { %>
-       
         <a href="/auth/google" class="login" style="padding-right: 30px;">
           <img src="https://sevenarrows.org/wp-content/uploads/2020/09/sign-in-with-google-icon-3.png" width="100" height="30" alt="Google Image for Login" style="margin-right: 10px;">
         </a>
       <% } %>
-  
   </nav>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
