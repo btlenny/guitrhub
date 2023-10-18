@@ -5,44 +5,35 @@ module.exports = {
   delete: deleteReview
 };
 
-async function create(req, res) {
-    const guitar = await Guitar.findById(req.params.id);
-     // Add the user-centric info to req.body (the new review)
-    req.body.user = req.user._id;
-    req.body.userName = req.user.name;
-    req.body.userAvatar = req.user.avatar;
-    // We can push (or unshift) subdocs into Mongoose arrays
-    guitar.reviews.push(req.body);
-    console.log(guitar)
-    try {
-      // Save any changes made to the movie doc
-      await guitar.save();
-    } catch (err) {
-      console.log(err);
-    }
-    // Step 5:  Respond to the Request (redirect if data has been changed)
-    res.redirect(`/guitars/${guitar._id}`);
-  }
 
-  async function deleteReview(req, res) {
-    const guitarId = req.params.id;
-    const reviewId = req.params.reviewId;
-    try {
-      // Find the guitar by its ID
-      const guitar = await Guitar.findById(guitarId);
-      if (!guitar) {
-        return res.status(404).send('Guitar not found');
-      }
-      // Find and remove the review by its ID
-      const reviewIndex = guitar.reviews.findIndex(review => review.id === reviewId);
-      if (reviewIndex === -1) {
-        return res.status(404).send('Review not found');
-      }
-      guitar.reviews.splice(reviewIndex, 1);
-      await guitar.save();
-      res.redirect(`/guitars/${guitar._id}`);
-    } catch (err) {
-      console.error(err);
-      res.status(500).send('Internal Server Error');
-    }
+async function create(req, res) {
+  const guitar = await Guitar.findById(req.params.id);
+  req.body.user = req.user._id; // Set user ID
+  req.body.userName = req.user.name; // Set user name
+  req.body.userAvatar = req.user.avatar; // Set user avatar
+  guitar.reviews.push(req.body);
+  try {
+    await guitar.save();
+    res.redirect(`/guitars/${guitar._id}`);
+  } catch (err) {
+    console.error(err);
+    res.status(500).send('Internal Server Error');
   }
+}
+
+
+
+
+async function deleteReview(req, res) {
+  // Note the cool "dot" syntax to query on the property of a subdoc
+  const guitar = await Guitar.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+  // Rogue user!
+  if (!guitar) return res.redirect('/guitars');
+  // Remove the review using the remove method available on Mongoose arrays
+  guitar.reviews.remove(req.params.id);
+  // Save the updated movie doc
+  await guitar.save();
+  // Redirect back to the movie's show view
+  res.redirect(`/guitars/${guitar._id}`);
+}
+

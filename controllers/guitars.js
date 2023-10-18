@@ -14,7 +14,7 @@ function newGuitar(req, res) {
   }
 
 async function show(req, res) {
-    const guitar = await Guitar.findById(req.params.id);
+    const guitar = await Guitar.findById(req.params.id).populate('reviews');
     res.render('guitars/show', { title: 'Guitar Reviews', guitar });
   }
 
