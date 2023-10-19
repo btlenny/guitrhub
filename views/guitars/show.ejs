@@ -21,18 +21,20 @@
           <% guitar.reviews.forEach(function(r) { %>
             <tr>
               <td class="review-details">
-                <img alt="avatar" src="<%= r.userAvatar %>" class="avatar" referrerpolicy="no-referrer">
-                <div>
-                  <p><strong><%= r.userName %></strong></p>
+                
                   <div class="review-box">
                     <p><strong>Review:</strong></p>
-                    <p><%= r.content %></p>
+                    <p id="reviewtext"><%= r.content %></p>
                   </div>
                   <div class="rating-box">
                     <p><strong>Rating:</strong></p>
-                    <p><%= r.rating %></p>
+                    <p id="reviewtext"><%= r.rating %></p>
                   </div>
+                  <div class="user-info">
+                    <img alt="avatar" src="<%= r.userAvatar %>" class="avatar" referrerpolicy="no-referrer" id="googleavatar">
+                    <p id="googlename">by <%= r.userName %></p>
                 </div>
+  
               </td>
               <td>
               </td>
