@@ -1,13 +1,14 @@
 <%- include('../partials/header', { isHomePage: false }) %>
 <head>
-  <title>GuitrHub</title>
+  <title>
+    GuitrHub</title>
 <head>
 <body>
 <div class="card--bs-dark-border-subtle" style="width: 18rem" id="brand-model">
   <div class="card-body">
     <p class="card-text">
-      <b>Brand:</b> <%= guitar.brand %><br>
-      <b>Model:</b> <%= guitar.model %>
+      <%= guitar.brand %>
+      <%= guitar.model %>
     </p>
   </div>
 </div>
@@ -36,13 +37,13 @@
               <td>
               </td>
             </tr>
-              <td colspan="2">
+              <td class="button-container" colspan="2">
                 <% if (user?._id.equals(r.user)) { %>
+                  <form action="/reviews/<%= r._id %>/edit" method="GET">
+                    <button type="submit" class="btn btn-warning btn-sm">Edit</button>
+                  </form>
                   <form action="/reviews/<%= r._id %>?_method=DELETE" method="POST">
                     <button type="submit" class="btn btn-danger btn-sm">Delete</button>
-                  </form>
-                  <form action="/reviews/<%= r._id %>/edit" method="GET">
-                    <button type="submit" class="btn btn-primary btn-sm">Edit</button>
                   </form>
                 <% } %>
               </td>

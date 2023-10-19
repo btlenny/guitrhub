@@ -1,10 +1,10 @@
-const Guitar = require('../models/guitar');
+const Guitar = require("../models/guitar");
 
 module.exports = {
   create,
   delete: deleteReview,
   edit,
-  update
+  update,
 };
 
 async function create(req, res) {
@@ -18,15 +18,18 @@ async function create(req, res) {
     res.redirect(`/guitars/${guitar._id}`);
   } catch (err) {
     console.error(err);
-    res.status(500).send('Internal Server Error');
+    res.status(500).send("Internal Server Error");
   }
 }
 
 async function deleteReview(req, res) {
   // Note the cool "dot" syntax to query on the property of a subdoc
-  const guitar = await Guitar.findOne({ 'reviews._id': req.params.id, 'reviews.user': req.user._id });
+  const guitar = await Guitar.findOne({
+    "reviews._id": req.params.id,
+    "reviews.user": req.user._id,
+  });
   // Rogue user!
-  if (!guitar) return res.redirect('/guitars');
+  if (!guitar) return res.redirect("/guitars");
   // Remove the review using the remove method available on Mongoose arrays
   guitar.reviews.remove(req.params.id);
   // Save the updated movie doc
@@ -36,16 +39,17 @@ async function deleteReview(req, res) {
 }
 
 async function edit(req, res) {
-  const guitar = await Guitar.findOne({ 'reviews._id': req.params.id });
+  const guitar = await Guitar.findOne({ "reviews._id": req.params.id });
   const review = guitar.reviews.id(req.params.id);
-  res.render('reviews/edit', { guitar, review }); // Pass both 'guitar' and 'review'
+  res.render("reviews/edit", { guitar, review }); // Pass both 'guitar' and 'review'
 }
 
 async function update(req, res) {
-  const guitar = await Guitar.findOne({ 'reviews._id': req.params.id });
+  const guitar = await Guitar.findOne({ "reviews._id": req.params.id });
   const reviewSubdoc = guitar.reviews.id(req.params.id);
   // Ensure that the review was created by the logged-in user
-  if (!reviewSubdoc.user.equals(req.user._id)) return res.redirect(`/guitars/${guitar._id}`);
+  if (!reviewSubdoc.user.equals(req.user._id))
+    return res.redirect(`/guitars/${guitar._id}`);
   // Update the text of the review
   reviewSubdoc.content = req.body.content; // Corrected the variable name
   try {

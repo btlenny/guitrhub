@@ -1,38 +1,43 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
-const reviewSchema = new Schema({
-  content: {
-    type: String,
-    required: true
+const reviewSchema = new Schema(
+  {
+    content: {
+      type: String,
+      required: true,
+    },
+    rating: {
+      type: Number,
+    },
+    user: {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: false,
+    },
+    userName: String,
+    userAvatar: String,
   },
-  rating: {
-    type: Number,
-  },
-  user: {
-    type: Schema.Types.ObjectId,
-    ref: 'User',
-    required: false
-  },
-  userName: String,
-  userAvatar: String
-  }, {
-    timestamps:true
-})
+  {
+    timestamps: true,
+  }
+);
 
-
-const guitarSchema = new Schema({
+const guitarSchema = new Schema(
+  {
     brand: {
       type: String,
-      required: true
+      required: true,
     },
     model: {
       type: String,
-      required: true
+      required: true,
     },
-      reviews: [reviewSchema]
-    }, {
-      timestamps: true
-    });
+    reviews: [reviewSchema],
+  },
+  {
+    timestamps: true,
+  }
+);
 
-module.exports = mongoose.model('Guitar', guitarSchema);
+module.exports = mongoose.model("Guitar", guitarSchema);

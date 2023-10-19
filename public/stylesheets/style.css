@@ -15,6 +15,7 @@ tbody {
 }
 
 h2 {
+  padding-top: 20px;
   padding-left: 20px;
   font-family: 'Palanquin Dark', sans-serif;
 }
@@ -25,9 +26,19 @@ form {
 }
 
 #brand-model {
-  font-size: 20px;
+  font-size: 30px;
   font-family: 'Palanquin Dark', sans-serif;
   padding-top: 20px;
   padding-left: 20px ;
+}
+
+.button-container {
+  display: flex; /* Make the forms and buttons flex items */
+  gap: 10px; /* Adjust the gap between the forms and buttons as needed */
+}
+
+.guitarlist {
+  padding-top: 50px;
+  padding-left: 30px;
 }
 
