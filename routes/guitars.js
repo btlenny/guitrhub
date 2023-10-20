@@ -1,8 +1,6 @@
 const express = require("express");
 const router = express.Router();
-// You'll be creating this controller module next
 const guitarsCtrl = require("../controllers/guitars");
-// Require the auth middleware
 const ensureLoggedIn = require("../config/ensureLoggedIn");
 
 // GET /guitars

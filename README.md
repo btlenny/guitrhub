@@ -2,7 +2,6 @@
 # What is GuitrHub?
 <p>Guitrhub is a dedicated platform designed for guitar enthusiasts to share and review their favorite guitars. Multiple users can collaborate in assessing and rating the same guitar, fostering a community of passionate guitarists.</p>
 
-
 # Inspiration
 <p>The inspiration for creating the Guitrhub app is rooted in a deep passion for music and guitars. As someone who has spent considerable time on platforms like sevenstring.org, Premiere Guitar, and others, reading reviews and contributing, the idea is to channel that enthusiasm into building a community where guitar enthusiasts can share their love for the instrument, exchange insights, and empower fellow guitarists in making informed choices. Additionally, the desire to leverage technology for an enhanced guitar-playing experience and personal growth plays a significant role in this endeavor. </p>
 
@@ -33,7 +32,6 @@ Link to live build: https://guitrhub-12c054b848f5.herokuapp.com/
 3. Navigate to "All Guitars" and click "Reviews" to start adding your review
 4. In "Add a Review" yoiu can enter your review thoughts and a rating. Hit "Add Review" to submit.
 5. Users have the option to edit or delete their reviews after submitting
-
 
 # Next Steps
 - Adding in a feature that allows users to upload photos of their guitars
