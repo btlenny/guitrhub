@@ -4,8 +4,11 @@
     GuitrHub</title>
 <head>
 <body>
+<div class="centered-content">
 <div class="card--bs-dark-border-subtle" style="width: 18rem" id="brand-model">
+  <img src="images/icon.png"/>
   <div class="card-body">
+    
     <p class="card-text">
       <%= guitar.brand %>
       <%= guitar.model %>
@@ -13,7 +16,7 @@
   </div>
 </div>
 <% if (guitar.reviews.length > 0) { %>
-  <div class="card mt-4">
+  <div class="card mt-4" id="reviewscard">
     <div class="card-body">
       <h5 class="card-title">Reviews</h5>
       <table class="table table-striped">
@@ -21,7 +24,6 @@
           <% guitar.reviews.forEach(function(r) { %>
             <tr>
               <td class="review-details">
-                
                   <div class="review-box">
                     <p><strong>Review:</strong></p>
                     <p id="reviewtext"><%= r.content %></p>
@@ -34,7 +36,6 @@
                     <img alt="avatar" src="<%= r.userAvatar %>" class="avatar" referrerpolicy="no-referrer" id="googleavatar">
                     <p id="googlename">by <%= r.userName %></p>
                 </div>
-  
               </td>
               <td>
               </td>
@@ -55,12 +56,14 @@
       </table>
     </div>
   </div>
+</div>
 <% } else { %>
   <div class="alert alert-info mt-4;">
     <h5>No Reviews Yet</h5>
   </div>
 <% } %>
-<div class="container">
+<div class="container" id="add-review-container">
+
   <br><br>
   <h2>Add a Review</h2>
   <form id="add-review-form" method="POST" action="/guitars/<%= guitar._id %>/reviews">

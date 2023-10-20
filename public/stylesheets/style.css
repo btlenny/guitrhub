@@ -7,6 +7,7 @@ body {
   background-attachment: fixed; 
   font-family: 'Palanquin Dark', sans-serif;
 }
+
 nav {
   font-family: 'Palanquin Dark', sans-serif;
 }
@@ -34,13 +35,10 @@ form {
 }
 
 .button-container {
-  display: flex; /* Make the forms and buttons flex items */
-  gap: 10px; /* Adjust the gap between the forms and buttons as needed */
+  display: flex; 
+  gap: 10px; 
 }
-/* Style for the individual guitar container */
-.guitar-container {
-  width: 18rem;
-}
+
 
 .guitar-list-container {
   display: flex;
@@ -55,8 +53,9 @@ form {
 }
 
 #logo{
+  margin-top: -20px;
   padding-left: 40px;
-  scale: .9;
+  scale: .8;
 }
 
 #reviewtext {
@@ -94,11 +93,6 @@ form {
   margin: 0 auto;
 }
 
-.card {
-  width: 100%;
-  margin-left: 0;
-}
-
 .guitar-list-container {
   display: flex;
   flex-wrap: wrap;
@@ -106,32 +100,26 @@ form {
   justify-content: center;
 }
 
-/* New styles for the individual guitar container */
 .guitar-container {
-  width: 18rem;
+  width: 50rem !important; 
 }
 
-/* New styles for the guitar card */
 .card {
-  width: 100%;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 100% !important;
+  max-width: 50rem !important;
 }
 
-/* New styles for the guitar icon */
+
 .guitar-icon {
  scale: .5;
   margin: 0 auto;
   display: block;
 }
 
-/* New styles for the guitar title */
 .card-title {
   text-align: center;
 }
 
-/* New styles for the "Reviews" button */
 .btn-outline-primary {
   display: block;
   margin: 0 auto;
@@ -146,3 +134,18 @@ h2.guitarlist {
 h2.centered-heading {
   text-align: center;
 }
+
+#add-review-container {
+  float: left; /* This moves the container to the left */
+  width: 50%; /* Adjust the width as needed */
+  margin: 20px; /* Add margin for spacing */
+}
+
+#reviewscard {
+  padding-left: 30px;
+}
+
+
+
+
+

@@ -1,51 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" type="text/css" href="/stylesheets/style.css"/>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-<body>
-  <nav class="navbar navbar-expand-md bg-dark">
-    <div class="container-fluid">
-      <div class="navbar-brand">
-        <% if (!isHomePage) { %>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" type="text/css" href="/stylesheets/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-md bg-dark">
+      <div class="container-fluid">
+        <div class="navbar-brand">
+          <% if (!isHomePage) { %>
           <a class="navbar-brand" href="/">
             <img
-            src="/images/guitrhub.png"
-            alt="Your Logo"
-            class="img-fluid"
-            style="height: 40px;"
-            onerror="this.src = '../images/guitrhub.png';">
+              src="/images/guitrhub.png"
+              alt="Your Logo"
+              class="img-fluid"
+              style="height: 40px"
+              onerror="this.src = '../images/guitrhub.png';"
+            />
           </a>
-        <% } %>
-      </div>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon" style="background-color: white;"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto"> 
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="/guitars/new">New Guitars</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" style="color: white" href="/guitars">All Guitars</a>
-          </li>
-          <% if (user) { %>
-            <li class="nav-item">
-              <a class="nav-link" style="color: darkkhaki" href="/logout">Logout</a>
-            </li>
-          <% } else { %>
-            <li class="nav-item">
-              <a class="nav-link" style="color: deepskyblue" href="/auth/google">Login with Google</a>
-            </li>
           <% } %>
-        </ul>
+        </div>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span
+            class="navbar-toggler-icon"
+            style="background-color: white"
+          ></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="/guitars/new"
+                >New Guitars</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" style="color: white" href="/guitars"
+                >All Guitars</a
+              >
+            </li>
+            <% if (user) { %>
+            <li class="nav-item">
+              <a class="nav-link" style="color: darkkhaki" href="/logout"
+                >Logout</a
+              >
+            </li>
+            <% } else { %>
+            <li class="nav-item">
+              <a class="nav-link" style="color: deepskyblue" href="/auth/google"
+                >Login with Google</a
+              >
+            </li>
+            <% } %>
+          </ul>
+        </div>
       </div>
-    </div>
-  </nav>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
-</body>
+    </nav>
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
