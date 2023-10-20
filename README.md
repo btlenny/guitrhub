@@ -25,7 +25,7 @@
 ![Adobe Photoshop](https://img.shields.io/badge/adobe%20photoshop-%2331A8FF.svg?style=for-the-badge&logo=adobe%20photoshop&logoColor=white)
 
 # Getting Started
-Link to live build: https://guitrhub-12c054b848f5.herokuapp.com/
+Link to live build: https://guitrhub-91c3f0c4fac4.herokuapp.com/
 
 1. Start by logging in with your Google Account
 2. Navigate to "New Guitars" and add in your Brand and Model of guitar
