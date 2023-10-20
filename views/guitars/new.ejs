@@ -5,7 +5,7 @@
   <div class="card-container">
     <div class="card">
       <div class="card-body" id="newguitar-form">
-        <form action="/guitars" method="POST" enctype="multipart/form-data">
+        <form action="/guitars" method="POST">
           <div class="mb-3" id="newguitar">
             <label for="brand" class="form-label">Brand:</label>
             <input
@@ -13,11 +13,10 @@
               class="form-control"
               id="brand"
               name="brand"
-              placeholder="Enter brand"
-            />
+              placeholder="Enter brand"/>
           </div>
           <div class="mb-3">
-            <label class="form-label">Model:</label>
+            <label for="model" class="form-label">Model:</label>
             <input
               type="text"
               class="form-control"
@@ -33,3 +32,7 @@
   </div>
   <p><%= errorMsg %></p>
 </body>
+
+<script>
+  console.log("This is a console log statement in your EJS template.");
+</script>
