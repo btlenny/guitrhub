@@ -6,7 +6,7 @@
 # Inspiration
 <p>The inspiration for creating the Guitrhub app is rooted in a deep passion for music and guitars. As someone who has spent considerable time on platforms like sevenstring.org, Premiere Guitar, and others, reading reviews and contributing, the idea is to channel that enthusiasm into building a community where guitar enthusiasts can share their love for the instrument, exchange insights, and empower fellow guitarists in making informed choices. Additionally, the desire to leverage technology for an enhanced guitar-playing experience and personal growth plays a significant role in this endeavor. </p>
 
-<img src="images/screenshot.jgp">
+<img src="public/images/screenshot.jgp">
 
 # Technologies Used
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
