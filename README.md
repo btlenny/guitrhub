@@ -6,7 +6,7 @@
 # Inspiration
 <p>The inspiration for creating the Guitrhub app is rooted in a deep passion for music and guitars. As someone who has spent considerable time on platforms like sevenstring.org, Premiere Guitar, and others, reading reviews and contributing, the idea is to channel that enthusiasm into building a community where guitar enthusiasts can share their love for the instrument, exchange insights, and empower fellow guitarists in making informed choices. Additionally, the desire to leverage technology for an enhanced guitar-playing experience and personal growth plays a significant role in this endeavor. </p>
 
-<img src="public/images/screenshot.jgp">
+<img src="public/images/screenshot.jpp">
 
 # Technologies Used
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -28,8 +28,16 @@
 # Getting Started
 Link to live build: https://guitrhub-12c054b848f5.herokuapp.com/
 
-1. Begin by clicking start
+1. Start by logging in with your Google Account
+2. Navigate to "New Guitars" and add in your Brand and Model of guitar
+3. Navigate to "All Guitars" and click "Reviews" to start adding your review
+4. In "Add a Review" yoiu can enter your review thoughts and a rating. Hit "Add Review" to submit.
+5. Users have the option to edit or delete their reviews after submitting
 
 
 # Next Steps
+- Adding in a feature that allows users to upload photos of their guitars
+- Average rating for each guitardisplayed
+- Update formatting so every page is uniform with styling
+- Add functionality so that other users are able to comment on other reviews
 
