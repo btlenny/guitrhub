@@ -37,6 +37,17 @@ form {
   display: flex; /* Make the forms and buttons flex items */
   gap: 10px; /* Adjust the gap between the forms and buttons as needed */
 }
+/* Style for the individual guitar container */
+.guitar-container {
+  width: 18rem;
+}
+
+.guitar-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
 
 .guitarlist {
   padding-top: 50px;
@@ -72,4 +83,66 @@ form {
   padding-top: 15px;
   font-size: 10px;
   white-space: nowrap;
+}
+
+#smallicon {
+  scale: .5;
+}
+
+.card-container {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.card {
+  width: 100%;
+  margin-left: 0;
+}
+
+.guitar-list-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* New styles for the individual guitar container */
+.guitar-container {
+  width: 18rem;
+}
+
+/* New styles for the guitar card */
+.card {
+  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* New styles for the guitar icon */
+.guitar-icon {
+ scale: .5;
+  margin: 0 auto;
+  display: block;
+}
+
+/* New styles for the guitar title */
+.card-title {
+  text-align: center;
+}
+
+/* New styles for the "Reviews" button */
+.btn-outline-primary {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+h2.guitarlist {
+  padding-right: 30px;
+  text-align: center;
+}
+
+h2.centered-heading {
+  text-align: center;
 }

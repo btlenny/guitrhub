@@ -19,7 +19,6 @@ async function show(req, res) {
 }
 
 async function create(req, res) {
-  req.body.lefthanded = !!req.body.lefthanded;
   try {
     await Guitar.create(req.body);
     res.redirect("/guitars");

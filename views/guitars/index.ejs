@@ -1,24 +1,25 @@
 <%- include('../partials/header', { isHomePage: false }) %>
 <body>
-  <h2 class="guitarlist">Guitar List</h2>
-  <table>
-    <tbody>
-      <% guitars.forEach(function(g) { %>
-        <tr>
-          <td class="guitar-container">
-            <div class="card" style="width: 18rem;">
-              <a href="/guitars/<%= g._id %>">
-                <img src="..." class="card-img-top" alt="...">
-              </a>
-              <div class="card-body">
-                <h5 class="card-title"><%= g.brand %> <%= g.model %></a></h5>
-                <a href="/guitars/<%= g._id %>" class="btn btn-outline-primary">Reviews</a>
+  <h2 class="guitarlist">All Guitars Reviewed</h2>
+  <div class="guitar-list-container">
+    <table>
+      <tbody>
+        <% guitars.forEach(function(g) { %>
+          <tr>
+            <td class="guitar-container">
+              <div class="card">
+                <a href="/guitars/<%= g._id %>">
+                  <img src="images/icon.png" alt="Guitar Icon" class="guitar-icon">
+                </a>
+                <div class="card-body">
+                  <h5 class="card-title"><%= g.brand %> <%= g.model %></h5>
+                  <a href="/guitars/<%= g._id %>" class="btn btn-outline-primary">Reviews</a>
+                </div>
               </div>
-            </div>
-          </td>
-          <td><a href="/guitars/<%= g._id %>"></a></td>
-        </tr>
-      <% }); %>
-    </tbody>
-  </table>
+            </td>
+          </tr>
+        <% }); %>
+      </tbody>
+    </table>
+  </div>
 </body>
